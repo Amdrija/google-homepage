@@ -2,6 +2,8 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
 }
 
 
@@ -10,7 +12,7 @@
     grid-template-areas: "nav"
         "content"
         "footer";
-    grid-template-rows: 100px 1fr 100px;
+    grid-template-rows: 100px 1fr 80px;
     grid-template-columns: 100%;
     height: 100vh;
 }
@@ -21,7 +23,7 @@
 .nav {
     grid-area: nav;
     justify-self: right;
-    padding: 5px;
+    padding: 20px;
 }
 
 .nav a,
@@ -31,15 +33,38 @@
     margin: 0 10px;
 }
 
+.nav .profile {
+    color: #eee;
+    font-size: 17px;
+    margin: 0;
+}
+
+.nav a {
+    font-size: 13px;
+    text-decoration: none;
+    color: #222222;
+}
+
+.nav a:hover {
+    color: #666666;
+    text-decoration: underline;
+}
+
+.nav a i {
+    font-size: 20px;
+    margin: 0;
+}
+
+
 .profile {
     display: inline-block;
-    width: 40px;
-    height: 40px;
-    border-radius: 20px;
-    background-color: hsl(140, 50%, 50%);
+    width: 34px;
+    height: 34px;
+    border-radius: 17px;
+    background-color: hsl(2000, 50%, 50%);
     text-align: center;
-    line-height: 40px;
-    font-size: 2em;
+    line-height: 34px;
+
 }
 
 /*
@@ -70,13 +95,54 @@
     display: table;
     margin: 0 auto;
     padding: 10px;
+    height: 50px;
+    width: 600px;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    text-align: center;
+    line-height: 30px;
+}
+
+.search-box:hover {
+    box-shadow: 0 1px 4px 0px #ccc;
+}
+
+.search-box input[type=text] {
+    font-size: 16px;
+    width: 480px;
+    border-style: none;
 }
 
 
+.search-box i {
+    color: #999;
+    margin: 0 10px;
+}
+
+.buttons {
+    text-align: center;
+}
+
 button,
 input[type=submit] {
+    box-sizing: border-box;
     padding: 10px 20px;
     margin: 20px;
+    border-radius: 3px;
+    border-style: solid;
+    border-color: #eee;
+    border-width: 1px;
+    outline: none;
+    color: #555;
+}
+
+button:hover,
+input[type=submit]:hover {
+    border-style: solid;
+    border-color: #999;
+    border-width: 1px;
+    color: black;
+    text-decoration: none;
 }
 
 /*
@@ -85,14 +151,23 @@ input[type=submit] {
 .footer {
     grid-area: footer;
     align-self: flex-end;
+
 }
 
 .footer-menu {
-    height: 50px;
-    line-height: 50px;
+    box-sizing: border-box;
+    height: 40px;
+    line-height: 40px;
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    color: #666;
+}
+
+.bottom {
+    border-top: none;
 }
 
 .footer-menu div {
@@ -110,4 +185,13 @@ input[type=submit] {
 
 .footer-item {
     margin: 0 15px;
+}
+
+.footer-menu a {
+    text-decoration: none;
+    color: #666;
+}
+
+.footer-menu a:hover {
+    text-decoration: underline;
 }
