@@ -1,0 +1,113 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+.container {
+    display: grid;
+    grid-template-areas: "nav"
+        "content"
+        "footer";
+    grid-template-rows: 100px 1fr 100px;
+    grid-template-columns: 100%;
+    height: 100vh;
+}
+
+/*
+    Navigation
+*/
+.nav {
+    grid-area: nav;
+    justify-self: right;
+    padding: 5px;
+}
+
+.nav a,
+.nav i,
+.nav .profile {
+    vertical-align: middle;
+    margin: 0 10px;
+}
+
+.profile {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: hsl(140, 50%, 50%);
+    text-align: center;
+    line-height: 40px;
+    font-size: 2em;
+}
+
+/*
+
+    Searchbox area
+
+*/
+
+.content {
+    grid-area: content;
+    justify-self: center;
+    align-self: center;
+    position: relative;
+    bottom: 17vh;
+}
+
+.content img,
+.content form {
+    margin: 10px auto;
+}
+
+.content img {
+    display: block;
+}
+
+
+.search-box {
+    display: table;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+
+button,
+input[type=submit] {
+    padding: 10px 20px;
+    margin: 20px;
+}
+
+/*
+*/
+
+.footer {
+    grid-area: footer;
+    align-self: flex-end;
+}
+
+.footer-menu {
+    height: 50px;
+    line-height: 50px;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+}
+
+.footer-menu div {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.footer-menu-right {
+    justify-self: right;
+}
+
+.footer-menu-left {
+    justify-self: left;
+}
+
+.footer-item {
+    margin: 0 15px;
+}
