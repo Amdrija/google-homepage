@@ -3,7 +3,7 @@
 ## Introduction
 Here I'm trying to recreate the google homepage as an assignment from the Odin Project. 
 
-This was done only with HTML and CSS, I have used only font-awesome JS for icons, but apart from that there was no JS involved in this project.
+This was done only with HTML and CSS, I have used only font-awesome JS for icons, but apart from that there was no JS involved in this project. You can visit it at https://amdrija.github.io/google-homepage/.
 
 ## Possible issues
 
